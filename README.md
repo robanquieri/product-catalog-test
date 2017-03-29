@@ -1,6 +1,6 @@
 # Case Study Tech
 
-- You don't have a lockin time to finish, but we know how long it takes to be done, so use your good sense.
+- You don't have a lock in time to finish, but we know how long it takes to be done, so use your good sense.
 - Your answers can be in English or Portuguese, whatever you prefer.
 - All non-human help is allowed. You can use the Internet and any site and tools you want. If you have questions about the tasks please don't hesitate to ask!
 - Visit the case study on [GitHub](https://github.com/dafiti/product-catalog-test)
