@@ -6,7 +6,7 @@
 - Visit the case study on [GitHub](https://github.com/dafiti/product-catalog-test)
 - Create a fork for this repository git@github.com:dafiti/product-catalog-test.git and clone it.
 - Solve the tasks as described.
-- After you finished, please create a Pull Requset for the master branch at git@github.com:dafiti/product-catalog-test.git 
+- After you finished, please create a Pull Request for the master branch at git@github.com:dafiti/product-catalog-test.git 
 
 ## Your tools
 - Editor/IDE
@@ -21,7 +21,12 @@ You and your team have the task to design and build a new product catalog for th
 ## Your tasks
 1. Design two alternative Storage solutions and describe advantages and drawbacks of either approach. Think about high number of concurrent requests (moderate write, heavily read). It can be different database strucutures or even completly different database products (only requirement is it needs to be opensource)
 2. Write a Filter (transformation to internal data format if needed) and Validator (correct input values) for the input data for the WMS service into our product catalog (you can use a language of your choice, no pseudo-code is allowed). Note:  We should be somehow able to execute the solution (e.g. run script, executable, unit test, etc.).
-3. Describe or implement a solution to handle temporary and permanent failure of the involved webservices (language of choice, pseudo-code allowed, external tools or frameworks allowed). As the time might be already tight, at least sketch out some ideas.
+
+## How to present your solution 
+
+1. Show us what your database design: might be SQL files, JSON schemas, or a text file explaining 
+2. WRITE CODE IN WHATEVER LANGUAGE YOU WANT (REMEMBER: WE NEED TO BE ABLE TO RUN THE CODE)
+3. Describe your implementation: it could be pseudo-code, tough you could also describe your solution in some markdown file or diagrams - or put it all together
 
 ## Technical Details
 There are a couple of backend webservices involved. You don't need to care about how the data is requested (e.g. REST, Thrift or something else). For our purpose we will use a simple JSON file as input data to validate your implementation. Use [this file](wms_product_data.json) for example data.
