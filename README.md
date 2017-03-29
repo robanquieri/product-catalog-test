@@ -1,12 +1,12 @@
 # Case Study Tech
 
-- You have 2.5 hours time.
+- You don't have a lockin time to finish, but we know how long it takes to be done, so use your good sense.
 - Your answers can be in English or Portuguese, whatever you prefer.
 - All non-human help is allowed. You can use the Internet and any site and tools you want. If you have questions about the tasks please don't hesitate to ask!
-- Visit the case study on [Bitbucket](https://bitbucket.org/dafiti/product-catalog)
-- Create a fork for this repository git@bitbucket.org:dafiti/product-catalog.git and clone it.
+- Visit the case study on [GitHub](https://github.com/dafiti/product-catalog-test)
+- Create a fork for this repository git@github.com:dafiti/product-catalog-test.git and clone it.
 - Solve the tasks as described.
-- After you finished, please create a Pull Requset for the master branch at git@bitbucket.org:dafiti/product-catalog.git [details on pull requests](https://www.atlassian.com/git/tutorials/making-a-pull-request/)
+- After you finished, please create a Pull Requset for the master branch at git@github.com:dafiti/product-catalog-test.git 
 
 ## Your tools
 - Editor/IDE
