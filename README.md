@@ -31,7 +31,7 @@ You and your team have the task to design and build a new product catalog for th
 
 3. Describe or implement a solution to handle temporary and permanent failure of the involved webservices (language of choice, pseudo-code allowed, external tools or frameworks allowed). As the time might be already tight, at least sketch out some ideas.
 
-*How to present your solution:* Describe your implementation: it could be pseudo-code, tough you could also describe your solution in some markdown file or diagrams - or put it all together
+*How to present your solution:* You may write real code, or you could write pseudo-code, though. You could also just write some ideas and concepts on a piece of paper (please don't take this seriously and use a text editor and save as mark down or text format - hand written letters can be hard to read :p ) or create some fancy diagrams for your solution. In the end: we need to be able to understand what's going on.
 
 ## Technical Details
 There are a couple of backend webservices involved. You don't need to care about how the data is requested (e.g. REST, Thrift or something else). For our purpose we will use a simple JSON file as input data to validate your implementation. Use [this file](wms_product_data.json) for example data.
