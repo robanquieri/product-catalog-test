@@ -21,6 +21,7 @@ You and your team have the task to design and build a new product catalog for th
 ## Your tasks
 1. Design two alternative Storage solutions and describe advantages and drawbacks of either approach. Think about high number of concurrent requests (moderate write, heavily read). It can be different database strucutures or even completly different database products (only requirement is it needs to be opensource)
 2. Write a Filter (transformation to internal data format if needed) and Validator (correct input values) for the input data for the WMS service into our product catalog (you can use a language of your choice, no pseudo-code is allowed). Note:  We should be somehow able to execute the solution (e.g. run script, executable, unit test, etc.).
+3. Describe or implement a solution to handle temporary and permanent failure of the involved webservices (language of choice, pseudo-code allowed, external tools or frameworks allowed).
 
 ## How to present your solution 
 
