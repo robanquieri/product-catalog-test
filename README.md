@@ -6,7 +6,7 @@
 - Visit the case study on [GitHub](https://github.com/dafiti/product-catalog-test)
 - Create a fork for this repository git@github.com:dafiti/product-catalog-test.git and clone it.
 - Solve the tasks as described.
-- After you finished, please create a Pull Request for the master branch at git@github.com:dafiti/product-catalog-test.git 
+- After you finished, please create a Pull Request for the master branch at git@github.com:dafiti/product-catalog-test.git
 
 ## Your tools
 - Editor/IDE

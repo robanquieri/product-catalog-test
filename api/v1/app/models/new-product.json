@@ -1,0 +1,55 @@
+{
+  "title": "new product",
+  "description": "describes properties required to create a new product",
+  "type": "object",
+  "properties": {
+    "sku": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "stock": {
+      "type": "array",
+      "maxItems": 150,
+      "items": {
+        "title": "Stock",
+        "description": "Product Stock options",
+        "type": "object",
+        "properties": {
+          "size": { "type": "string" },
+          "warehouse": { "type": "string" },
+          "quantity": { "type": "number" }
+        },
+        "required": ["size", "warehouse", "quantity"],
+        "additionalProperties": false
+      }
+    },
+    "brand": {
+      "type": "string"
+    },
+    "categories": {
+      "type": ["array"]
+    },
+    "product_image_url": {
+      "type": "string"
+    },
+    "special_price": {
+      "type": "number"
+    }
+  },
+  "required": ["sku", "price", "name", "description", "content", "region", "stock", "brand", "categories", "product_image_url" ]
+}
+
