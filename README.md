@@ -6,8 +6,45 @@ GFG Product Catalog
 ## Your tasks
 **1. Design two alternative Storage solutions and describe advantages and drawbacks of either approach. Think about high number of concurrent requests (moderate write, heavily read). It can be different database strucutures or even completly different database products (only requirement is it needs to be opensource)**
 
+### Relational (SQL)
+
 ![SQL model image](https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/sql.png)
+
+#### Advantages
+
+- Ease of use
+- Structured data
+- Relationships in this system have constraints
+- Precision
+- Security
+
+#### Disvantages
+
+- Hardware Performance
+- Slow extraction of meaning from data
+- Physical Storage Consumption
+- Relational Databases do not scale out horizontally very well
+- Expensive
+
+### Non-Relational (NoSQL)
+
 ![NoSQL model image](https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/nosql.png)
+
+#### Advantages
+
+- Scale out horizontally
+- Schema-free or Schema-on-read options
+- Scale Big
+- Fast extraction of meaning from data
+- Low cost
+
+#### Disvantages
+
+- Limited support for joins
+- Structure required
+- Limited indexing
+- Data verification hard to get right
+- Hard to represent certain kinds of data relationships
 
 **2. Write a Filter (transformation to internal data format if needed) and Validator (correct input values) for the input data for the WMS service into our product catalog (you can use a language of your choice, no pseudo-code is allowed). Note: We should be somehow able to execute the solution (e.g. run script, executable, unit test, etc.).**
 
@@ -36,10 +73,34 @@ Through the autoscaling feature you can configure some keys to increase or decre
 
 ![ELB+Autoscaling model image](https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/architecting.jpg)
 
+## Technical Details
+There are a couple of backend webservices involved. You don't need to care about how the data is requested (e.g. REST, Thrift or something else). For our purpose we will use a simple JSON file as input data to validate your implementation. Use [this file](wms_product_data.json) for example data.
+
+### WMS webservice (warehouse management system)
+*To execute this solution, run **Import products** endpoint.*
+
+```html
+api/v1/products/import
+```
+
+### Stock webservice
+*To execute this solution, run **Get product stock by sku and size** endpoint.*
+
+```html
+api/v1/products/stock/stock/:sku/:size
+```
+
+### CMS webservice
+*To execute this solution, run **Get product content and region by sku or category** endpoint.*
+
+```html
+api/v1/products/cms/:param
+```
+
 ### **GFG API V1 Documentation**
 ---
 ### Introduction
-GFG API V1 REST-like HTTP endpoints allow you to submit queries and get text-to-speech results. You can also modify entities and intents in your agent.
+GFG API V1 REST-like HTTP endpoints multi language allow you to submit queries and get text-to-speech results. You can also modify entities and intents in your agent.
 
 ## Getting Started
 ---
@@ -77,23 +138,13 @@ nodemon server.js
 
 1. Launch Postman.
 
-2. Enter the endpoint URL of a request in the address bar and choose the appropriate HTTP method from the drop-down list to the left of the address bar.
+2. Select *import* and import **GFG.postman_collection.json** to test all endpoints.
 
-3. Choose the Headers tab. Optionally, delete any existing headers. This can clear any stale settings that may cause errors. Add x-access-token: {YOUR_ACCESS_TOKEN} headers.
+## How Works
+---
 
-Choose Send to submit the request and receive a response.
-
-### Install API Setup
-
-```html
-GET api/v1/setup
-```
-#### Authenticate user and get the token
-
-```html
-POST api/v1/users/login
-```
-
+1. Run the setup (**api/v1/setup**) endpoint, to create the user and sample data
+2. Authenticate the user (**api/v1/users/login**) to get the token and be able to access all endpoints.
 
 ## Document
 ---
@@ -201,6 +252,7 @@ Callback
 | Endpoint                               | Description                                       | Type   |
 | -----------------------------------    | :-----------------------------------------------: | -----: |
 | api/v1/products                        | Add new product                                   | POST   |
+| api/v1/products/import                 | Import a batch of products                        | POST   |
 | api/v1/products                        | Get all products                                  | GET    |
 | api/v1/products/:id                    | Get product                                       | GET    |
 | api/v1/products/stock/stock/:sku/:size | Get product stock by sku and size                 | GET    |
