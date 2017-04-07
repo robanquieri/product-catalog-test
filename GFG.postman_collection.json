@@ -1,0 +1,266 @@
+{
+	"variables": [],
+	"info": {
+		"name": "GFG",
+		"_postman_id": "77ac8c48-c729-6edb-f907-19ae8bff8799",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PRODUCT",
+			"description": "",
+			"item": [
+				{
+					"name": "PRODUCT - ADD NEW PRODUCT",
+					"request": {
+						"url": "{{url}}/api/v1/products",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							},
+							{
+								"key": "content-language",
+								"value": "en",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": 1,\r\n  \"sku\": \"BATMAN-123\",\r\n  \"price\": 122.99,\r\n  \"name\": \"Batmobile\",\r\n  \"description\": \"Superhero Car\",\r\n  \"content\": \"01 Car Batmobile\",\r\n  \"region\": \"Centro-Oeste\",\r\n  \"stock\": [\r\n    {\r\n      \"size\": \"RN\",\r\n      \"warehouse\": \"Jundiaí\",\r\n      \"quantity\": 10\r\n    },\r\n    {\r\n      \"size\": \"M\",\r\n      \"warehouse\": \"São Paulo\",\r\n      \"quantity\": 10\r\n    },\r\n    {\r\n      \"size\": \"G\",\r\n      \"warehouse\": \"Jundiaí\",\r\n      \"quantity\": 10\r\n    }\r\n  ],\r\n  \"brand\": \"Bruce Wayne\",\r\n  \"categories\": [\"Super Heroes\", \"Flying Cars\", \"Cars\"],\r\n  \"product_image_url\": \"cdn.gfg.com.br/batmobile.jpg\",\r\n  \"special_price\": 11.22\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - IMPORT A BATCH OF PRODUCTS",
+					"request": {
+						"url": "{{url}}/api/v1/products/import",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							},
+							{
+								"key": "content-language",
+								"value": "en",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"sku\": \"BATMAN-123\",\r\n        \"price\": \"122.99\",\r\n        \"name\": \"Batmobile\",\r\n        \"description\": \"Superhero Car\",\r\n        \"content\": \"01 Car Batmobile\",\r\n        \"region\": \"Centro-Oeste\",\r\n        \"stock\": [\r\n            {\r\n                \"size\": \"RN\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"M\",\r\n                \"warehouse\": \"São Paulo\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"G\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            }\r\n        ],\r\n        \"brand\": \"Bruce Wayne\",\r\n        \"categories\": [\"Super Heroes\", \"Flying Cars\", \"Cars\"],\r\n        \"product_image_url\": \"cdn.gfg.com.br/batmobile.jpg\",\r\n        \"special_price\": \"11.22\"\r\n    },\r\n    {\r\n        \"sku\": \"SPD-99\",\r\n        \"price\": \"1992.99\",\r\n        \"name\": \"Spiderman Suit\",\r\n        \"description\": \"Fancy suit for Spidermen\",\r\n        \"content\": \"01 Homecoming Lycra Spiderman \",\r\n        \"region\": \"Nordeste\",\r\n        \"stock\": [\r\n            {\r\n                \"size\": \"RN\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"M\",\r\n                \"warehouse\": \"São Paulo\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"G\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            }\r\n        ],\r\n        \"brand\": \"Peter Parker\",\r\n        \"categories\": [\"Super Heroes\", \"Spiderman\", \"Clothes\"],\r\n        \"product_image_url\": \"http://cdn.gfg.com.br/spider-suite.jpg\"\r\n    },\r\n    {\r\n        \"sku\": \"KRYPT-123\",\r\n        \"price\": \"122.99\",\r\n        \"name\": \"Kryptonite\",\r\n        \"description\": \"Anti Superman material\",\r\n        \"content\": \"01 Kryptonite Crystal Shard\",\r\n        \"region\": \"Norte\",\r\n        \"stock\": [\r\n            {\r\n                \"size\": \"RN\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"M\",\r\n                \"warehouse\": \"São Paulo\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"G\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            }\r\n        ],\r\n        \"brand\": \"Lex Luthor\",\r\n        \"categories\": [\"Super Heroes\", \"Superman\", \"Accessories\"],\r\n        \"product_image_url\": \"http://cdn.gfg.com.br/kryptonite.jpg\",\r\n        \"special_price\": \"0.99\"\r\n    },\r\n    {\r\n        \"sku\": \"BATMAN-001\",\r\n        \"price\": \"12323.99\",\r\n        \"name\": \"Batman Suit\",\r\n        \"description\": \"Comfortable Suit for hunt evil criminals\",\r\n        \"content\": \"01 Homecoming Lycra Batman\",\r\n        \"region\": \"Sudeste\",\r\n        \"stock\": [\r\n            {\r\n                \"size\": \"RN\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"M\",\r\n                \"warehouse\": \"São Paulo\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"G\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            }\r\n        ],\r\n        \"brand\": \"Bruce Wayne\",\r\n        \"categories\": [\"Super Heroes\", \"Clothes\", \"Batman\"],\r\n        \"product_image_url\": \"batman-suite\"\r\n    },\r\n    {\r\n        \"sku\": \"SPD-334\",\r\n        \"price\": \"1.99\",\r\n        \"name\": \"Spidernet refill set\",\r\n        \"description\": \"To refill your net capabilities\",\r\n        \"content\": \"01 Homecoming Lycra Batman\",\r\n        \"region\": \"Sul\",\r\n        \"stock\": [\r\n            {\r\n                \"size\": \"RN\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"M\",\r\n                \"warehouse\": \"São Paulo\",\r\n                \"quantity\": 10\r\n            },\r\n            {\r\n                \"size\": \"G\",\r\n                \"warehouse\": \"Jundiaí\",\r\n                \"quantity\": 10\r\n            }\r\n        ],\r\n        \"brand\": \"Peter Parker\",\r\n        \"categories\": [\"Super Heroes\", \"Spiderman\", \"Accessories\"],\r\n        \"product_image_url\": \"http://cdn.gfg.com.br/spiderman/spidernet.jpg\",\r\n        \"special_price\": \"1\"\r\n    }\r\n]\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - GET ALL PRODUCTS",
+					"request": {
+						"url": "{{url}}/api/v1/products/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							},
+							{
+								"key": "content-language",
+								"value": "en",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - GET PRODUCT BY PRODUCT ID",
+					"request": {
+						"url": "{{url}}/api/v1/products/58e6d6501af34f09c4fe4606",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							},
+							{
+								"key": "content-language",
+								"value": "en",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - GET PRODUCT STOCK BY SKU AND SIZE",
+					"request": {
+						"url": "{{url}}/api/v1/products/stock/batman-123/rn",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							},
+							{
+								"key": "content-language",
+								"value": "en",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - GET PRODUCT CONTENT AND REGION BY SKU OR CATEGORY",
+					"request": {
+						"url": "{{url}}/api/v1/products/cms/Super Heroes",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							},
+							{
+								"key": "content-language",
+								"value": "en",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - UPDATE PRODUCT",
+					"request": {
+						"url": "{{url}}/api/v1/products/58e56bf06bcdd22330fa9592",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\" : \"Batmobile1\"\r\n}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCT - DELETE PRODUCT",
+					"request": {
+						"url": "{{url}}/api/v1/products/58e6d30a89d37a2f68dd5088",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiX192IjoiaW5pdCIsInBhc3N3b3JkIjoiaW5pdCIsInVzZXIiOiJpbml0IiwiY3JlYXRlZEF0IjoiaW5pdCIsInVwZGF0ZWRBdCI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJ1c2VyIjp0cnVlLCJjcmVhdGVkQXQiOnRydWUsInVwZGF0ZWRBdCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwiZW1pdHRlciI6eyJkb21haW4iOm51bGwsIl9ldmVudHMiOnt9LCJfZXZlbnRzQ291bnQiOjAsIl9tYXhMaXN0ZW5lcnMiOjB9fSwiaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9fdiI6MCwicGFzc3dvcmQiOiIkMmEkMTAkZ2s0SUZSakFSYy9HNGxWQ1B1RmJ3T01tRzdzeWxGOENwVjVoQ3IvWEtWRFgzNEZVMk9OZFMiLCJ1c2VyIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsInVwZGF0ZWRBdCI6IjIwMTctMDQtMDRUMjA6MTI6MTMuMDA3WiIsIl9pZCI6IjU4ZTNmZTFjYzU0MDdlMTk1MDY2ODA1YiJ9LCJpYXQiOjE0OTEzMzg1NTksImV4cCI6MTQ5MTk0MzM1OX0.fxnbbl31GVplzbb-8kOVyavSarDwRpLQmJuzhqfO3ck",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SETUP",
+			"description": "",
+			"item": [
+				{
+					"name": "SETUP API",
+					"request": {
+						"url": "{{url}}/api/v1/setup",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"description": "",
+			"item": [
+				{
+					"name": "USER - AUTHENTICATE USER AND GET THE TOKEN TO ACCESS ALL ENDPOINTS",
+					"request": {
+						"url": "{{url}}/api/v1/users/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "admin",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "s5aswefr2sT#7ech",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
