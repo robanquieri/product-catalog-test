@@ -88,6 +88,23 @@ router.post('/', validateSchema('new-product'), (req, res, next) => {
   })
 })
 /**
+ * Import batch products
+ * @returns {Results}
+ */
+router.post('/import', (req, res, next) => {
+  const LANGUAGE = (req.headers['content-language']) ? languages[req.headers['content-language']] : languages['en']
+  let data = req.body
+
+  Products.insertMany(data, {ordered: false}, (err, result) => {
+    if (err) return next(err)
+    res.status(200).json({
+      totalProducts: data.length,
+      totalProductsImported: result.length,
+      totalProductsWithError: data.length - result.length,
+    })
+  })
+})
+/**
  * Get all products
  * @property {numeric} req.query.page - Current page.
  * @property {numeric} req.query.limit - Total pages.
