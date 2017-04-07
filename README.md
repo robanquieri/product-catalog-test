@@ -6,7 +6,8 @@ GFG Product Catalog
 ## Your tasks
 **1. Design two alternative Storage solutions and describe advantages and drawbacks of either approach. Think about high number of concurrent requests (moderate write, heavily read). It can be different database strucutures or even completly different database products (only requirement is it needs to be opensource)**
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/sql.png" /></div>
+![SQL model image](https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/sql.png)
+![NoSQL model image](https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/nosql.png)
 
 **2. Write a Filter (transformation to internal data format if needed) and Validator (correct input values) for the input data for the WMS service into our product catalog (you can use a language of your choice, no pseudo-code is allowed). Note: We should be somehow able to execute the solution (e.g. run script, executable, unit test, etc.).**
 
@@ -27,13 +28,13 @@ POST api/v1/products
 
 The Circuit Breaker pattern can prevent an application failure in one part of the system might lead to cascading failures. Applying the Circuit Breaker pattern, you can define a fallback approach for each of your microservices, if a service fails, you can make a special treatment so that the system remains available even without that service.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/CircuitBreaker.png" /></div>
+![Circuit Breaker model image](https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/CircuitBreaker.png)
 
 #### ELB+Autoscaling
 
 Through the autoscaling feature you can configure some keys to increase or decrease a number of EC2 virtual machines, so as to scale your applications horizontally.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/architecting.jpg" /></div>
+![ELB+Autoscaling model image](https://raw.githubusercontent.com/robanquieri/product-catalog-test/master/images/architecting.jpg)
 
 ### **GFG API V1 Documentation**
 ---
@@ -51,13 +52,19 @@ cd product-catalog-test/api/v1
 
 Install dependencies:
 ```sh
-# Install dependencies
 npm install
+```
+
+Run MongoDB:
+```sh
+mkdir ~/data
+Local => mongod --dbpath ~/data:/data/db
+# or
+Docker => sudo docker run -d -p 27017:27017 -v ~/data:/data/db mongo
 ```
 
 Start server:
 ```sh
-# Start server
 nodemon server.js
 ```
 
@@ -173,6 +180,7 @@ Headers
 
 ```
 Content-Type: application/json; charset=utf-8
+content-language: en or pt-br
 ```
 
 | Username | Password         |
@@ -231,6 +239,7 @@ Headers
 ```
 Content-Type: application/json; charset=utf-8
 x-access-token: YOUR_ACCESS_TOKEN
+content-language: en or pt-br
 ```
 
 Body
@@ -274,7 +283,7 @@ Callback
 {
   "success": true,
   "message": "Product added successfully",
-  "user_id": "58e6d6501af34f09c4fe4606"
+  "productid": "58e6d6501af34f09c4fe4606"
 }
 ```
 
@@ -289,6 +298,7 @@ Headers
 ```
 Content-Type: application/json; charset=utf-8
 x-access-token: YOUR_ACCESS_TOKEN
+content-language: en or pt-br
 ```
 
 Callback
@@ -359,6 +369,7 @@ Headers
 ```
 Content-Type: application/json; charset=utf-8
 x-access-token: YOUR_ACCESS_TOKEN
+content-language: en or pt-br
 ```
 
 Callback
@@ -425,6 +436,7 @@ Headers
 ```
 Content-Type: application/json; charset=utf-8
 x-access-token: YOUR_ACCESS_TOKEN
+content-language: en or pt-br
 ```
 
 Callback
@@ -451,6 +463,7 @@ Headers
 ```
 Content-Type: application/json; charset=utf-8
 x-access-token: YOUR_ACCESS_TOKEN
+content-language: en or pt-br
 ```
 
 Callback
@@ -505,6 +518,7 @@ Headers
 ```
 Content-Type: application/json; charset=utf-8
 x-access-token: YOUR_ACCESS_TOKEN
+content-language: en or pt-br
 ```
 
 Body
@@ -535,6 +549,7 @@ Headers
 ```
 Content-Type: application/json; charset=utf-8
 x-access-token: YOUR_ACCESS_TOKEN
+content-language: en or pt-br
 ```
 
 Callback
