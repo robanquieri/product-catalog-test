@@ -135,8 +135,8 @@ router.get('/:id', (req, res, next) => {
   })
 })
 /**
- * Get product by sku and size
- * @returns {Product}
+ * Get product stock by sku and size
+ * @returns {Product stock}
  */
 router.get('/stock/:sku/:size', (req, res, next) => {
   const LANGUAGE = (req.headers['content-language']) ? languages[req.headers['content-language']] : languages['en']

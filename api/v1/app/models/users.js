@@ -15,11 +15,15 @@ var schemaOptions = {
 // SCHEMA
 // =====================
 var userSchema = new mongoose.Schema({
-  name: {
+  username: {
     type: String,
-    unique: true
+    unique: true,
+    required: true
   },
-  password: String
+  password: {
+    type: String,
+    required: true
+  }
 }, schemaOptions)
 
 userSchema.pre('save', function (next) {

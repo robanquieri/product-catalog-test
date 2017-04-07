@@ -22,7 +22,7 @@ router.use((req, res, next) => {
   const tokenProvided = req.body.token || req.query.token || req.headers['x-access-token']
 
   if (tokenProvided) {
-    jwt.verify(tokenProvided, app.get('superSecret'), {ignoreExpiration: true}, function (err, decoded) {
+    jwt.verify(tokenProvided, app.get('superSecret'), {ignoreExpiration: false}, function (err, decoded) {
       if (err) {
         return res.status(401).json({
           success: false,

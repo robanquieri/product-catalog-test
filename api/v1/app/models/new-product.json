@@ -3,6 +3,9 @@
   "description": "describes properties required to create a new product",
   "type": "object",
   "properties": {
+    "status": {
+      "type": "number"
+    },
     "sku": {
       "type": "string"
     },
@@ -50,6 +53,6 @@
       "type": "number"
     }
   },
-  "required": ["sku", "price", "name", "description", "content", "region", "stock", "brand", "categories", "product_image_url" ]
+  "required": ["status","sku", "price", "name", "description", "content", "region", "stock", "brand", "categories", "product_image_url" ]
 }
 

@@ -18,6 +18,7 @@ const options = {
 // SCHEMA
 // =====================
 const ProductSchema = new mongoose.Schema({
+  status: { type: Number, required: true, default: 1 },
   sku: { type: String, required: true, lowercase: true },
   price: { type: Number, required: true },
   name: { type: String, required: true },

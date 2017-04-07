@@ -22,14 +22,14 @@ const data = require('../data/wms_product_data.json')
 
 router.get('/', (req, res, next) => {
   const sample = new Users({
-    name: 'admin',
+    username: 'admin',
     password: 's5aswefr2sT#7ech'
   })
 
   async.waterfall(
     [
       function (callback) {
-        Users.find({ name: sample.name }, callback)
+        Users.find({ username: sample.username }, callback)
       }
     ],
     function (err, user) {

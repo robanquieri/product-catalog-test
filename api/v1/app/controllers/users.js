@@ -39,7 +39,7 @@ router.post('/login', (req, res, next) => {
   async.waterfall(
     [
       function (callback) {
-        Users.find({ name: req.body.name }, callback)
+        Users.find({ username: req.body.name }, callback)
       }
     ],
     function (err, user) {
