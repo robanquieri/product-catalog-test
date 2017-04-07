@@ -82,7 +82,7 @@ router.post('/', validateSchema('new-product'), (req, res, next) => {
       res.status(200).json({
         success: true,
         message: LANGUAGE.NEW[2],
-        user_id: result._id
+        productid: result._id
       })
     }
   })
